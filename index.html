@@ -11,9 +11,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="theme-dark">
-
     <div id="grid-overlay"></div>
+    <canvas id="mesh-background"></canvas>
     <div id="toast-container"></div>
+
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <!-- Navigation Framework -->
     <nav class="navbar">
@@ -21,8 +31,10 @@
             <a href="#" class="nav-logo">apatrick<span class="blinking-cursor">_</span></a>
             <ul class="nav-links" id="nav-links">
                 <li><a href="#about" class="active">.init()</a></li>
+                <li><a href="#experience">.experience()</a></li>
                 <li><a href="#skills">.skills()</a></li>
                 <li><a href="#projects">.repositories()</a></li>
+                <li><a href="#testimonials">.feedback()</a></li>
                 <li><a href="#contact">.connect()</a></li>
             </ul>
             <div class="menu-toggle" id="mobile-menu">
@@ -42,6 +54,22 @@
                 <div class="hero-buttons">
                     <a href="#projects" class="btn btn-primary">Query Repos</a>
                     <a href="#contact" class="btn btn-secondary">Bind('message')</a>
+                </div>
+
+                <!-- Stats Counter -->
+                <div class="stats-row">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="15">0</div>
+                        <div class="stat-label">Projects</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="8">0</div>
+                        <div class="stat-label">Languages</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="3">0</div>
+                        <div class="stat-label">Years XP</div>
+                    </div>
                 </div>
             </div>
             
@@ -76,16 +104,50 @@
         </div>
         <div class="about-container">
             <div class="about-text">
-                <p>Computer science is not about code; it's about defining the mathematical bounds of reality. My engineering approach balances theoretical computational theory against the gritty constraints of hardware execution cycles and memory latency.</p>
+                <p>Computer science is not about code; it's about defining the mathematical bounds of reality. My engineering approach balances theoretical computational theory against the gritty realities of production systems.</p>
                 <p>I focus on systemic optimization, whether that's tuning database locking mechanisms for maximum concurrency or architecting multi-stage data pipelines across geographic regions.</p>
             </div>
         </div>
     </section>
 
-    <!-- Technical Matrix Segment -->
-    <section id="skills" class="section bg-dim">
+    <!-- Experience Timeline -->
+    <section id="experience" class="section bg-dim">
         <div class="section-title-wrap">
-            <span class="section-number">02.</span>
+            <span class="section-number">02A.</span>
+            <h2 class="section-title">Professional Journey</h2>
+        </div>
+        <div class="timeline-container">
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <h3>Senior Systems Engineer</h3>
+                    <p class="timeline-date">2023 - Present</p>
+                    <p>Leading distributed systems architecture and optimization of high-throughput data pipelines. Mentoring junior engineers on architectural patterns.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <h3>Full Stack Developer</h3>
+                    <p class="timeline-date">2021 - 2023</p>
+                    <p>Developed production systems using Rust, Go, and Python. Implemented microservices architecture serving millions of requests daily.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <h3>Junior Software Engineer</h3>
+                    <p class="timeline-date">2020 - 2021</p>
+                    <p>Started career building web applications and learning systems programming. Contributed to open-source projects.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Matrix Segment -->
+    <section id="skills" class="section">
+        <div class="section-title-wrap">
+            <span class="section-number">02B.</span>
             <h2 class="section-title">Technical Matrix</h2>
         </div>
         <div class="skills-matrix">
@@ -111,10 +173,62 @@
                 </div>
             </div>
         </div>
+
+        <!-- Skill Bars -->
+        <div class="skills-bars-container">
+            <h3 class="skills-bars-title">Core Proficiencies</h3>
+            <div class="skill-bar-group">
+                <div class="skill-bar-item">
+                    <div class="skill-bar-header">
+                        <span class="skill-name">Systems Design</span>
+                        <span class="skill-percentage">95%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-bar-fill" data-percentage="95"></div>
+                    </div>
+                </div>
+                <div class="skill-bar-item">
+                    <div class="skill-bar-header">
+                        <span class="skill-name">Distributed Systems</span>
+                        <span class="skill-percentage">90%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-bar-fill" data-percentage="90"></div>
+                    </div>
+                </div>
+                <div class="skill-bar-item">
+                    <div class="skill-bar-header">
+                        <span class="skill-name">Database Optimization</span>
+                        <span class="skill-percentage">88%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-bar-fill" data-percentage="88"></div>
+                    </div>
+                </div>
+                <div class="skill-bar-item">
+                    <div class="skill-bar-header">
+                        <span class="skill-name">Machine Learning</span>
+                        <span class="skill-percentage">82%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-bar-fill" data-percentage="82"></div>
+                    </div>
+                </div>
+                <div class="skill-bar-item">
+                    <div class="skill-bar-header">
+                        <span class="skill-name">Cloud Architecture</span>
+                        <span class="skill-percentage">85%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-bar-fill" data-percentage="85"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Repositories Grid Segment -->
-    <section id="projects" class="section">
+    <section id="projects" class="section bg-dim">
         <div class="section-title-wrap">
             <span class="section-number">03.</span>
             <h2 class="section-title">Engineering Repositories</h2>
@@ -123,6 +237,12 @@
         <div class="repo-toolbar">
             <p>Active Nodes: <span class="highlight">10/10</span></p>
             <div class="toolbar-actions">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="rust">Rust</button>
+                    <button class="filter-btn" data-filter="python">Python</button>
+                    <button class="filter-btn" data-filter="systems">Systems</button>
+                </div>
                 <input type="text" placeholder="Query repository_id..." id="repo-search">
                 <button class="btn btn-icon" id="sync-btn"><i class="fas fa-sync"></i></button>
             </div>
@@ -130,7 +250,7 @@
 
         <div class="repositories-grid" id="repos-grid">
             <!-- Node 1 -->
-            <div class="repo-card" data-title="Distributed Task Scheduler">
+            <div class="repo-card" data-title="Distributed Task Scheduler" data-category="rust">
                 <div class="card-header">
                     <i class="far fa-folder repo-icon"></i>
                     <div class="repo-stats">
@@ -143,7 +263,7 @@
                 <div class="repo-tags"><span>Rust</span><span>Redis</span><span>gRPC</span></div>
             </div>
             <!-- Node 2 -->
-            <div class="repo-card" data-title="Distributed Hash Table Implementation">
+            <div class="repo-card" data-title="Distributed Hash Table Implementation" data-category="systems">
                 <div class="card-header">
                     <i class="far fa-folder repo-icon"></i>
                     <div class="repo-stats">
@@ -156,7 +276,7 @@
                 <div class="repo-tags"><span>C++</span><span>UDP</span><span>Systems</span></div>
             </div>
             <!-- Node 3 -->
-            <div class="repo-card" data-title="Real-time Network Telescope">
+            <div class="repo-card" data-title="Real-time Network Telescope" data-category="systems">
                 <div class="card-header">
                     <i class="far fa-folder repo-icon"></i>
                     <div class="repo-stats">
@@ -169,7 +289,7 @@
                 <div class="repo-tags"><span>Java</span><span>Kafka</span><span>ELK</span></div>
             </div>
             <!-- Node 4 -->
-            <div class="repo-card" data-title="Graph Neural Network Framework">
+            <div class="repo-card" data-title="Graph Neural Network Framework" data-category="python">
                 <div class="card-header">
                     <i class="far fa-folder repo-icon"></i>
                     <div class="repo-stats">
@@ -182,7 +302,7 @@
                 <div class="repo-tags"><span>Python</span><span>PyTorch</span><span>AI</span></div>
             </div>
             <!-- Node 5 -->
-            <div class="repo-card" data-title="B-Tree File System from Scratch">
+            <div class="repo-card" data-title="B-Tree File System from Scratch" data-category="systems">
                 <div class="card-header">
                     <i class="far fa-folder repo-icon"></i>
                     <div class="repo-stats">
@@ -195,7 +315,7 @@
                 <div class="repo-tags"><span>C++</span><span>FS</span><span>DiskIO</span></div>
             </div>
             <!-- Node 6 -->
-            <div class="repo-card" data-title="Consensus Algorithm Simulation (Raft)">
+            <div class="repo-card" data-title="Consensus Algorithm Simulation (Raft)" data-category="systems">
                 <div class="card-header">
                     <i class="far fa-folder repo-icon"></i>
                     <div class="repo-stats">
@@ -208,7 +328,7 @@
                 <div class="repo-tags"><span>Go</span><span>Concurrency</span><span>Raft</span></div>
             </div>
             <!-- Node 7 -->
-            <div class="repo-card" data-title="Queryable Bloom Filter API">
+            <div class="repo-card" data-title="Queryable Bloom Filter API" data-category="rust">
                 <div class="card-header">
                     <i class="far fa-folder repo-icon"></i>
                     <div class="repo-stats">
@@ -221,7 +341,7 @@
                 <div class="repo-tags"><span>Rust</span><span>Rocket</span><span>NoSQL</span></div>
             </div>
             <!-- Node 8 -->
-            <div class="repo-card" data-title="Database Locking Protocol Simulator">
+            <div class="repo-card" data-title="Database Locking Protocol Simulator" data-category="systems">
                 <div class="card-header">
                     <i class="far fa-folder repo-icon"></i>
                     <div class="repo-stats">
@@ -234,7 +354,7 @@
                 <div class="repo-tags"><span>Java</span><span>SQL</span><span>Transactions</span></div>
             </div>
             <!-- Node 9 -->
-            <div class="repo-card" data-title="Image Denoising using GANs">
+            <div class="repo-card" data-title="Image Denoising using GANs" data-category="python">
                 <div class="card-header">
                     <i class="far fa-folder repo-icon"></i>
                     <div class="repo-stats">
@@ -247,7 +367,7 @@
                 <div class="repo-tags"><span>Python</span><span>TensorFlow</span><span>CV</span></div>
             </div>
             <!-- Node 10 -->
-            <div class="repo-card" data-title="Parallel Sorting Visualizer (OpenMP)">
+            <div class="repo-card" data-title="Parallel Sorting Visualizer (OpenMP)" data-category="systems">
                 <div class="card-header">
                     <i class="far fa-folder repo-icon"></i>
                     <div class="repo-stats">
@@ -262,10 +382,59 @@
         </div>
     </section>
 
-    <!-- Communication Socket Socket Segment -->
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section">
+        <div class="section-title-wrap">
+            <span class="section-number">04A.</span>
+            <h2 class="section-title">What Others Say</h2>
+        </div>
+        <div class="testimonials-carousel">
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">AP</div>
+                    <div>
+                        <h4>Alex Richardson</h4>
+                        <p>Tech Lead, DistribTech</p>
+                    </div>
+                </div>
+                <p class="testimonial-text">"Ayom's expertise in distributed systems is exceptional. His solution to our consensus protocol issues saved us millions."</p>
+                <div class="testimonial-stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">MJ</div>
+                    <div>
+                        <h4>Maya Johnson</h4>
+                        <p>CTO, CloudSystems Inc</p>
+                    </div>
+                </div>
+                <p class="testimonial-text">"A true systems architect. The optimization work improved our pipeline throughput by 40%. Highly recommend."</p>
+                <div class="testimonial-stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">KL</div>
+                    <div>
+                        <h4>Kevin Lee</h4>
+                        <p>Engineering Manager, DataFlow Corp</p>
+                    </div>
+                </div>
+                <p class="testimonial-text">"Exceptional problem-solver. His ML infrastructure improvements made training 3x faster. Outstanding engineer."</p>
+                <div class="testimonial-stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Communication Socket Segment -->
     <section id="contact" class="section bg-dim">
         <div class="section-title-wrap">
-            <span class="section-number">04.</span>
+            <span class="section-number">04B.</span>
             <h2 class="section-title">Bind Socket Connection</h2>
         </div>
         <div class="contact-container">
@@ -278,16 +447,28 @@
                 <textarea name="payload" rows="5" placeholder="payload_message_contents..." required></textarea>
                 <button type="submit" class="btn btn-primary">Transmit Package <i class="fas fa-paper-plane"></i></button>
             </form>
+
+            <!-- Newsletter Signup -->
+            <div class="newsletter-section">
+                <h3>Subscribe to Updates</h3>
+                <p>Get notified about new projects and technical insights</p>
+                <form class="newsletter-form" id="newsletter-form">
+                    <input type="email" placeholder="your@email.com" required>
+                    <button type="submit" class="btn btn-primary btn-small">Subscribe</button>
+                </form>
+            </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="footer-container">
             <p>&copy; 2026 Ayom Patrick. All rights reserved. [System Status: Stable]</p>
             <div class="social-links">
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fab fa-x-twitter"></i></a>
+                <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" title="Twitter"><i class="fab fa-x-twitter"></i></a>
+                <a href="#" title="Email"><i class="fas fa-envelope"></i></a>
             </div>
         </div>
     </footer>
