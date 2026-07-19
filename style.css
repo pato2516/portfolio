@@ -63,6 +63,43 @@ body.theme-light {
 .highlight { color: var(--primary); }
 .bg-dim { background-color: rgba(17,24,39,0.6); }
 
+/* --- Typewriter Effect --- */
+.typewriter-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.2em;
+}
+
+.typewriter-text {
+    display: inline-block;
+    overflow: hidden;
+    border-right: 3px solid var(--primary);
+    white-space: nowrap;
+    animation: typewriter 4s steps(20, end) 0.5s 1 normal both, 
+               blink-typewriter 0.75s steps(1, end) 0.5s infinite;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+    to {
+        width: 10em;
+    }
+}
+
+@keyframes blink-typewriter {
+    0%, 49% {
+        border-right-color: var(--primary);
+    }
+    50%, 100% {
+        border-right-color: transparent;
+    }
+}
+
 /* --- Theme Toggle Button --- */
 .theme-toggle {
     position: fixed;
@@ -976,6 +1013,12 @@ body.theme-light {
     .theme-toggle {
         top: 70px;
         right: 16px;
+    }
+
+    .typewriter-text {
+        width: auto !important;
+        animation: none;
+        border-right: none;
     }
 }
 
